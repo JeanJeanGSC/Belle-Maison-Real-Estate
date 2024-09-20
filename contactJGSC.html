@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		
+		<!-- ligne suivante permet d'ajouter une icone a l'onglet dans le browser -->
+		<link rel="shortcut icon" href="IMAGES/logoTab.jpg" type="Images/png">
+		
+		<!-- ligne suivante permet d'ajouter un nouveau fichier de rule de style -->
+		<link rel="stylesheet" href="CSS/globalPageSecondaireJGSC.css">
+		<link rel="stylesheet" href="CSS/Pages/contactPageJGSC.css">
+		
+		<script src="JS/scriptFormContact.js" defer></script>
+		
+		<title> Belle Maison Couturier/CONTACT </title>
+	</head>
+	
+	<body>
+		<header>  
+			<nav class="TopMenu">
+				<a class="MenuLinkTitre" href="MenuJGSC.html"> Belle Maison </a>
+				
+				<div class="TopMenuButton">
+					<a class="MenuLinkBtn" href="typeProprietesJGSC.html">
+						<div class="ButtonChoix"> PROPRIETÉS DISPONIBLE </div>
+					</a>
+					<a class="MenuLinkBtn" href="caculHypothequeJGSC.html">
+						<div class="ButtonChoix"> CALCUL HYPOTHÈQUE </div>
+					</a>
+				</div>
+			</nav>
+		</header>
+		
+		<div class="Contact">
+			<h1 class="ContactTitre"> Nous contacter </h1>
+			<form id="formContact">
+				<div class="ContactForm">
+					<input name="nom" type="text" maxlength="25"
+							placeholder="Nom *" />
+					<input name="prenom" type="text" maxlength="25"
+							placeholder="Prénom *" />
+							
+					<input name="email" type="text" maxlength="30"
+							placeholder="E-mail *" />
+					<input name="adresse" type="text"
+							placeholder="Adresse" />
+					
+					<label> Date de naissance: </label>
+					<input type="date" name="dateNaissance"  />
+				</div>
+				<div class="ContactFormBtn">
+					<input name="BtnAnnuler" type="reset" value="Annuler" onclick="resetForm()">
+					<input name="BtnEnvoi" type="submit" value="Envoyer" onclick="submitForm(event)">
+				</div>
+			</form>
+			<p> * Champs obligatoire </p>
+		</div>
+		
+		<footer class="Signature"> 
+			<h5> Tous droit réservé | site créer par Jean Couturier 2024 | Bisous, caresse & Pop-corn aux chocolat </h5>
+		</footer>
+	</body>
+</html>

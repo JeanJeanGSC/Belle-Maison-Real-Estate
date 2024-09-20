@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding:0;
+	box-sizing: border-box; /* Ajoute box-sizing pour inclure padding et border dans la taille totale */
+}
+
+body {
+	margin: 0;
+    height: 100vh; /* S'assure que le body prend toute la hauteur de la fenêtre */
+	background-color: rgba(246,245,235);
+}
+
+a {
+    text-decoration: none;
+	color: rgba(46, 33, 15);
+}
+
+.TopMenu { 
+	display: flex;
+	justify-content: space-around;
+	padding: 15px;	
+	background-image: url('../IMAGES/HomeAcceuil.jpg');
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.MenuLinkTitre {
+	font-family: 'Montserrat';
+	font-size: 2rem;
+	font-weight: 700;
+	
+	padding: 8px 0px;
+}
+
+.MenuLinkBtn {
+	margin: 5px;
+	padding: 8px;
+	border-radius: 20px;
+	border: 1px solid;
+	background-color: rgba(183, 151, 109, 0.7);
+	align-content: center;
+	font-family: 'Montserrat';
+    font-size: 15px;
+	font-weight: 600; 
+}
+
+.TopMenuButton {
+	display: flex;
+	justify-content: center;
+}
+
+.Signature {
+	display: flex;
+	justify-content: center;
+	font-family: 'Montserrat';
+	font-size: 1rem;
+	cursor: default;
+}

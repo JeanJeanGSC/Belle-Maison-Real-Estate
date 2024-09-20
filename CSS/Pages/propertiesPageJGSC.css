@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.Properties > * { /*tous les enfants contenu dans le parents*/
+	/* outline: 2px solid blue; /*contour d'apprendtissage*/ */
+}
+.PropertieLink > * { /*tous les enfants contenu dans le parents*/
+	/* outline: 1px solid green; */
+}
+.Resume > * { /*tous les enfants contenu dans le parents*/
+	/* outline: 1px solid purple; */
+}
+.ListProperties > * { /*tous les enfants contenu dans le parents*/
+	/* border: 1px solid pink; */
+}
+
+.Properties {
+	/* outline: 3px dotted red; /*contour d'apprendtissage */
+
+	display: block;
+	padding: 20px;
+	margin: 0% auto;
+	width: 65%;
+}
+
+.PropertiesTitre {
+	display: flex;
+	margin: 5% auto;
+	justify-content: center;
+	font-family: 'Montserrat';
+	font-size: 4rem;
+	font-weight: 600;
+	color: rgba(46, 33, 15);
+	cursor: default;
+}
+
+.ListProperties {
+	display: flex;
+	flex-direction: column;
+	color: rgba(46, 33, 15);
+	font-family: 'Montserrat';
+}
+
+.AfficherProperties {
+	list-style-type: none; /*Efface le point de list */
+	height: 50vh; /* 50% de la hauteur du viewport(fenêtre du navigateur) */
+    margin-bottom: 5%;
+}
+
+.PropertieLink {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 65% auto;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-column-gap: 2%;
+	text-decoration: none;
+	color: rgba(46, 33, 15);
+}
+
+.ImageCover {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	grid-row: 1/4;
+}
+
+.Resume {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 10px;
+	grid-row: 1/4;
+}
+
+.Quartier {
+	font-style: italic;
+	font-size: 1.5rem;
+}
+.RT_Texte {
+	font-size: 2rem;
+	font-weight: 600;
+}
+.ResInfo {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.ResPrix {
+	display: flex;
+	justify-content: right;
+	font-size: 2rem;
+}

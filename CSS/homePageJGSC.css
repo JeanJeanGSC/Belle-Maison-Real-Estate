@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	padding:0;
+	box-sizing: border-box; /* Ajoute box-sizing pour inclure padding et border dans la taille totale */
+}
+
+body {
+	margin: 0;
+    height: 100vh; /* S'assure que le body prend toute la hauteur de la fenêtre */
+}
+
+.Home {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 100px auto 50px;
+	margin: 0;
+	height: 100vh;
+	background-image: url('../IMAGES/HomeAcceuil.jpg');
+	background-size: cover; /* S'assure que l'image couvre tout l'écran */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+	
+	transition: background-image 0.5s ease-in-out;
+}
+
+/* **************************************************** TITRE/HEADER *** */
+.HomeHeader {
+	grid-column: 1 / 3;
+	z-index: 1;
+	position: relative;
+}
+.HomeHeader::before {
+    content: "";
+    position: absolute;
+    width: calc(100% / 4); /* Occupe le quart de la largeur du parent */
+    height: 100%;
+    background: linear-gradient(to left, rgba(183, 151, 109, 0), rgba(183, 151, 109, 0.8));
+    z-index: -1; /* Place le pseudo-élément derrière le contenu */
+}
+
+.HH_Titre {
+	display: flex;
+	position: relative;
+	padding: 0.2% 0 0 5%;
+	color: rgba(46, 33, 15);
+	font-family: 'Montserrat';
+	font-size: 5rem;
+	font-weight: 500;
+	cursor: default; 
+}
+.HH_Titre::after {
+	content:  url('../IMAGES/logoHeader.png');
+	margin-top: 1.2%;
+    margin-left: 0.5%;
+}
+
+/* **************************************************** MENU GAUCHE *** */
+.MenuPrincipal {
+	grid-column-start: 1;
+	grid-column-end: 2;
+    z-index: 1; /* S'assure que le menu est au-dessus de l'image de fond */
+    padding: 0;
+	margin: 0;
+	display: flex;
+    flex-direction: column;
+	justify-content: center; /* Répartit l'espace verticalement */
+	background: linear-gradient(to left, rgba(183, 151, 109, 0), rgba(183, 151, 109, 0.8));
+}
+
+.MenuP_Choix {
+	display: flex;
+	justify-content: left;
+	align-items: center; /* aligne le contenu verticalement */
+	height: 33.33%;
+	/* animation: 1s ease-out 0s 1 slideInFromLeft; */
+}
+
+.MenuP_Choix a {
+	display: flex; /* Utilise flex pour centrer le contenu */
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgba(46, 33, 15);
+}
+
+.ChoixContent {
+    padding: 10px 10px 10px 30px ;
+	width: 100%;
+}
+
+.ContentNum {
+	font-family: 'Montserrat';
+    font-size: 2rem;
+	color: rgba(46, 33, 15);
+    margin-bottom: 5px;
+}
+
+.ContentTitre {
+	margin-top: 15px;
+	color: rgba(46, 33, 15);
+	font-family: 'Montserrat';
+    font-size: 2.8rem;
+	font-weight: 500; /*aucun changement visible en dessous d'un certain seuil*/
+}
+
+/* **************************************************** FOOTER *** */
+.Signature {
+	grid-column: 1 / 2;
+	position: relative;
+	padding-top: 1em;
+	background: linear-gradient(to left, rgba(183, 151, 109, 0), rgba(183, 151, 109, 0.8));
+	font-family: 'Montserrat';
+	font-size: 0.8rem;
+	z-index: 1;
+	cursor: default;
+}
+
+/* **************************************************** ANIMATION *** */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+	opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+	opacity: 1;
+  }
+}
+
+.MenuP_Choix:hover {
+	background: linear-gradient(to right, rgba(183, 151, 109, 0), rgba(183, 151, 109, 0.8));
+	border-right: solid 2px rgba(183, 151, 109, 0.8);
+	border-radius: 30px;
+}

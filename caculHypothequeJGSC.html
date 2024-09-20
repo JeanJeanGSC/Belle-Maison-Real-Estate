@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		
+		<!-- ligne suivante permet d'ajouter une icone a l'onglet dans le browser -->
+		<link rel="shortcut icon" href="IMAGES/logoTab.jpg" type="Images/png">
+		
+		<!-- ligne suivante permet d'ajouter un nouveau fichier de rule de style -->
+		<link rel="stylesheet" href="CSS/globalPageSecondaireJGSC.css">
+		<link rel="stylesheet" href="CSS/Pages/hypothequePageJGSC.css">
+		
+		<script src="JS/scriptCalculHypotheque.js" defer></script>
+		
+		<title> Belle Maison Couturier/HYPOTHÈQUE </title>
+	</head>
+	
+	<body>
+		<header>  
+			<nav class="TopMenu">
+				<a class="MenuLinkTitre" href="MenuJGSC.html"> Belle Maison </a>
+				
+				<div class="TopMenuButton">
+					<a class="MenuLinkBtn" href="typeProprietesJGSC.html">
+						<div class="ButtonChoix"> PROPRIETÉS DISPONIBLE </div>
+					</a>
+					<a class="MenuLinkBtn" href="contactJGSC.html">
+						<div class="ButtonChoix"> CONTACT </div>
+					</a>
+				</div>
+			</nav>
+		</header>
+		
+		<div class="Hypotheque">
+			<h1 class="CalculTitre"> Simulation de prêt </h1>
+			<form id= "formCalcul">
+				<div class="CalculForm">
+					<input name="montantEmprunt" type="text" size="30" maxlength="8"
+							placeholder="Montant à emprunter *" />
+					<input name="taux" type="text" size="30" maxlength="4"
+							placeholder="Taux d'intêret annuel (en %) *" />
+					<input name="dureeRbs" type="text" size="30" maxlength="2" 
+							placeholder="Durée du prêt (en années) *" />
+					<input id="resultat" name="resultat" type="text" size="50" placeholder="Résultat" readonly />
+					<!-- mettre l'input de res hidden et l'afficher quand on clique sur btn ? -->
+				</div>
+				<div class="CalculFormBtn">
+					<input name="BtnAnnuler" type="reset" value="Annuler" onclick="RAZ()">
+					<input name="BtnEnvoi" type="submit" value="Calculer" onclick="calcul(event)">
+				</div>
+			</form>
+			<p id="champ"> * Champs obligatoire </p>
+		</div>
+		
+		<footer class="Signature"> 
+			<h5> Tous droit réservé | site créer par Jean Couturier 2024 | Bisous, caresse & Pop-corn aux chocolat </h5>
+		</footer>
+		
+	</body>
+</html>
